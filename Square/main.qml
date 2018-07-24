@@ -12,5 +12,13 @@ Window {
         id: background
         anchors.fill: parent
         color: Qt.rgba(1, 0, 1, 1)
+
+        MouseArea {
+            anchors.fill: parent
+
+            onClicked: {
+                background.color = Qt.rgba(Math.random(), Math.random(), Math.random(), 1)
+            }
+        }
     }
 }
